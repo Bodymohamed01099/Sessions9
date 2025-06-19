@@ -3,7 +3,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('https://1379157261074698270.discordsays.com/.proxy/fonts/Poppins-Light.woff2') format('woff2');
+  src: url('/fonts/Poppins-Light.woff2') format('woff2');
 }
 
 @font-face {
