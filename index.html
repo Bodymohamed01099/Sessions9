@@ -129,5 +129,33 @@
         </div>
     </div>
 </div>
+     <!-- Discord SDK -->
+    <script src="https://embed.discord.com/embed.js"></script>
+    <script>
+      const clientId = 'YOUR_CLIENT_ID_HERE'; // ✨ ضع هنا Client ID من Discord App
+      const discordSdk = new window.DiscordSDK(clientId);
+
+      async function init() {
+        await discordSdk.ready();
+        document.getElementById("status").innerText = "✅ Discord SDK جاهز";
+
+        const { code } = await discordSdk.commands.authorize({
+          client_id: clientId,
+          response_type: "code",
+          state: "test",
+          prompt: "none",
+          scope: "identify guilds",
+        });
+
+        console.log("🔐 AUTH CODE:", code);
+
+        document.getElementById("start").onclick = () => {
+          alert("🎉 جلسة بدأت! (كود: " + code + ")");
+          // تقدر تبدأ WebSocket أو تبعت الكود لسيرفرك هنا
+        };
+      }
+
+      init();
+    </script>
 </body>
 </html>
