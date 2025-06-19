@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Poppins';
-  font-weight: 300;
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Poppins-Light.woff2') format('woff2');
+  src: url('/.proxy/fonts-static/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecg.woff2') format('woff2');
 }
 
 @font-face {
